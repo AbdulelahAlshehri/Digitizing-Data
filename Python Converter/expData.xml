@@ -1,0 +1,168 @@
+<?xml version="1.0"?>
+<property>
+<datapoint>
+    <T(K)>924</T(K)>
+    <P(atm)>3.42</P(atm)>
+    <tau(us)>10050</tau(us)>
+</datapoint>
+<datapoint>
+    <T(K)>930</T(K)>
+    <P(atm)>3.586</P(atm)>
+    <tau(us)>7912</tau(us)>
+</datapoint>
+<datapoint>
+    <T(K)>930</T(K)>
+    <P(atm)>3.534</P(atm)>
+    <tau(us)>13090</tau(us)>
+</datapoint>
+<datapoint>
+    <T(K)>930</T(K)>
+    <P(atm)>3.635</P(atm)>
+    <tau(us)>10420</tau(us)>
+</datapoint>
+<datapoint>
+    <T(K)>931</T(K)>
+    <P(atm)>3.622</P(atm)>
+    <tau(us)>7851</tau(us)>
+</datapoint>
+<datapoint>
+    <T(K)>938</T(K)>
+    <P(atm)>3.651</P(atm)>
+    <tau(us)>7723</tau(us)>
+</datapoint>
+<datapoint>
+    <T(K)>938</T(K)>
+    <P(atm)>3.535</P(atm)>
+    <tau(us)>6973</tau(us)>
+</datapoint>
+<datapoint>
+    <T(K)>938</T(K)>
+    <P(atm)>3.52</P(atm)>
+    <tau(us)>6133</tau(us)>
+</datapoint>
+<datapoint>
+    <T(K)>939</T(K)>
+    <P(atm)>3.622</P(atm)>
+    <tau(us)>6803</tau(us)>
+</datapoint>
+<datapoint>
+    <T(K)>939</T(K)>
+    <P(atm)>3.598</P(atm)>
+    <tau(us)>7274</tau(us)>
+</datapoint>
+<datapoint>
+    <T(K)>944</T(K)>
+    <P(atm)>3.651</P(atm)>
+    <tau(us)>5627</tau(us)>
+</datapoint>
+<datapoint>
+    <T(K)>944</T(K)>
+    <P(atm)>3.525</P(atm)>
+    <tau(us)>6819</tau(us)>
+</datapoint>
+<datapoint>
+    <T(K)>949</T(K)>
+    <P(atm)>3.512</P(atm)>
+    <tau(us)>4740</tau(us)>
+</datapoint>
+<datapoint>
+    <T(K)>957</T(K)>
+    <P(atm)>3.541</P(atm)>
+    <tau(us)>3652</tau(us)>
+</datapoint>
+<datapoint>
+    <T(K)>958</T(K)>
+    <P(atm)>3.706</P(atm)>
+    <tau(us)>3737</tau(us)>
+</datapoint>
+<datapoint>
+    <T(K)>964</T(K)>
+    <P(atm)>3.566</P(atm)>
+    <tau(us)>3882</tau(us)>
+</datapoint>
+<datapoint>
+    <T(K)>967</T(K)>
+    <P(atm)>3.515</P(atm)>
+    <tau(us)>3408</tau(us)>
+</datapoint>
+<datapoint>
+    <T(K)>967</T(K)>
+    <P(atm)>3.711</P(atm)>
+    <tau(us)>3352</tau(us)>
+</datapoint>
+<datapoint>
+    <T(K)>971</T(K)>
+    <P(atm)>3.627</P(atm)>
+    <tau(us)>2377</tau(us)>
+</datapoint>
+<datapoint>
+    <T(K)>973</T(K)>
+    <P(atm)>3.624</P(atm)>
+    <tau(us)>2260</tau(us)>
+</datapoint>
+<datapoint>
+    <T(K)>975</T(K)>
+    <P(atm)>3.687</P(atm)>
+    <tau(us)>3229</tau(us)>
+</datapoint>
+<datapoint>
+    <T(K)>977</T(K)>
+    <P(atm)>3.589</P(atm)>
+    <tau(us)>2893</tau(us)>
+</datapoint>
+<datapoint>
+    <T(K)>981</T(K)>
+    <P(atm)>3.646</P(atm)>
+    <tau(us)>2920</tau(us)>
+</datapoint>
+<datapoint>
+    <T(K)>984</T(K)>
+    <P(atm)>3.679</P(atm)>
+    <tau(us)>1625</tau(us)>
+</datapoint>
+<datapoint>
+    <T(K)>987</T(K)>
+    <P(atm)>3.397</P(atm)>
+    <tau(us)>2075</tau(us)>
+</datapoint>
+<datapoint>
+    <T(K)>992</T(K)>
+    <P(atm)>3.448</P(atm)>
+    <tau(us)>1641</tau(us)>
+</datapoint>
+<datapoint>
+    <T(K)>1000</T(K)>
+    <P(atm)>3.651</P(atm)>
+    <tau(us)>1103</tau(us)>
+</datapoint>
+<datapoint>
+    <T(K)>1003</T(K)>
+    <P(atm)>3.572</P(atm)>
+    <tau(us)>1060</tau(us)>
+</datapoint>
+<datapoint>
+    <T(K)>1010</T(K)>
+    <P(atm)>3.454</P(atm)>
+    <tau(us)>628</tau(us)>
+</datapoint>
+<datapoint>
+    <T(K)>1014</T(K)>
+    <P(atm)>3.437</P(atm)>
+    <tau(us)>637</tau(us)>
+</datapoint>
+<datapoint>
+    <T(K)>1021</T(K)>
+    <P(atm)>3.374</P(atm)>
+    <tau(us)>618</tau(us)>
+</datapoint>
+<datapoint>
+    <T(K)>1102</T(K)>
+    <P(atm)>3.393</P(atm)>
+    <tau(us)>184</tau(us)>
+</datapoint>
+<datapoint>
+    <T(K)>1118</T(K)>
+    <P(atm)>3.392</P(atm)>
+    <tau(us)>150</tau(us)>
+</datapoint>
+</property>
