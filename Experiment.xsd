@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<!-- Author: Abdulelah Alshehri asaalshehr@gmail.com -->
+
+<!-- TODO: validate and revisit types -->
+<!-- TODO: fix properties -->
+<!-- TODO: validate minOccurs -->
+<!-- Root element to describe an indirect experiment. Possible types of indirect experiments are measurements of ignition delay times, laminar burning velocities, concentration profiles measured as a function of time, distance or varying experimental conditions (e.g. reactor temperature).-->
+
+<!-- The file has  9 parent elements-->
+
+<!-- Main element -->
+<xs:element name="experiment"/>
+
+<xs:complexType name="experiment">
+   
+<xs:sequence>
+<!-- 1st parent element: Mandatory -->
+<xs:element name="fileAuthor" type="xs:string" minOccurs="1"/>
+
+<!-- 2nd parent element: Allowed -->
+<xs:element name="fileDOI" type="xs:string" minOccurs="0"/>
+
+<!-- 3rd parent element: Allowed -->
+<xs:element name="fileVersion">
+<xs:complexType>
+<xs:sequence>
+<xs:element name = "major" type = "xs:int" minOccurs="0" />
+<xs:element name = "minor" type = "xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+
+<!-- 4th parent element: Mandatory -->
+<xs:element name="ReSpecThVersion">
+<xs:complexType>
+<xs:sequence>
+<xs:element name = "major" type = "xs:int" minOccurs="0" />
+<xs:element name = "minor" type = "xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+
+<!-- 5th parent element: Mandatory -->
+<xs:element name="experimentType" type="xs:string"/>
+
+<!-- 6th parent element: c -->
+<xs:element name="bibliographyLink">
+<xs:complexType>
+<xs:sequence>
+<xs:element name = "description" type = "xs:string" />
+<xs:element name = "referenceDOI" type = "xs:string" />
+<xs:element name = "location" type = "xs:string" />
+<xs:element name = "figure" type = "xs:string" />
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+
+<!-- 6th parent element: Allowed -->
+<xs:element name="apparatus">
+<xs:complexType>
+<xs:sequence>
+<xs:element name = "kind" type = "xs:string" />
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+
+<!-- 7th parent element: Allowed -->
+<xs:element name="commonProperties">
+<xs:complexType>
+<xs:sequence>
+<xs:element  name="property" maxOccurs="unbounded">
+<xs:complexType>
+<xs:simpleContent>
+<xs:extension base="xs:string">
+<xs:attribute name="label" type="xs:string" use="required" />
+<xs:attribute name="name" type="xs:string" use="required" />
+<xs:attribute name="units" type="xs:string" use="required" />
+<xs:attribute name="sourcetype" type="xs:string" use="required" />
+</xs:extension>
+</xs:simpleContent> 
+</xs:complexType>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+
+
+
+
+<xs:element name = "value"/>
+
+<xs:element name = "component" type = "xs:string" />
+<xs:attribute name="preferredKey" type="xs:string" use="required" />
+<xs:attribute name="CAS" type="xs:string" use="required" />
+<xs:attribute name="chemName" type="xs:string" use="required" /><xs:attribute name="preferredKey" type="xs:string" use="required" />
+<xs:attribute name="sourcetype" type="xs:string" use="required" />
+
+
+
+<xs:element name = "amount" type = "xs:string" />
+<xs:attribute name="units" type="xs:string" use="required" />
+
+
+
+</xs:element>
+
+<!-- 8th parent element: Mandatory -->
+<xs:element name="dataGroup"/>
+
+
+<!-- 9th parent element: Mandatory/Non-handled -->
+<xs:element name="ignitionType"/>
+
+
+
+<!-- 10th parent element: Allowed/Non-handled -->
+<xs:element name="timeshift"/>
+
+
+
+<!-- 11th parent element: Allowed -->
+<xs:element name="comment"/>
+
+
+
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
