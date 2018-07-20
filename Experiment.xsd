@@ -7,7 +7,7 @@
 <!-- TODO: validate minOccurs -->
 <!-- Root element to describe an indirect experiment. Possible types of indirect experiments are measurements of ignition delay times, laminar burning velocities, concentration profiles measured as a function of time, distance or varying experimental conditions (e.g. reactor temperature).-->
 
-<!-- The file has  9 parent elements-->
+<!-- The file has  11 parent elements-->
 
 <!-- Main element -->
 <xs:element name="experiment"/>
