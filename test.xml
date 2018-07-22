@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<experiment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Exp.xsd">
+  <fileAuthor>fileAuthor</fileAuthor>
+  <fileVersion>
+    <major>0</major>
+    <minor>0</minor>
+  </fileVersion>
+  <ReSpecThVersion>
+    <major>0</major>
+    <minor>0</minor>
+  </ReSpecThVersion>
+  <experimentType>experimentType</experimentType>
+  <bibliographyLink preferredKey=""/>
+  <apparatus>
+    <kind>kind</kind>
+  </apparatus>
+  <commonProperties>
+    <property description="" label="" name="" units="">
+      <value>0</value>
+    </property>
+  </commonProperties>
+  <dataGroup id="" label="">
+    <dataGroupLink dataGroupID="" dataPointID=""/>
+    <property description="" id="" label="" name="" plotaxis="" plotscale="" units=""/>
+    <dataPoint>
+      <x1>0.0</x1>
+      <x2>0.0</x2>
+      <x3>0.0</x3>
+      <x4>0.0</x4>
+      <x5>0.0</x5>
+      <x6>0.0</x6>
+      <x7>0.0</x7>
+      <x8>0.0</x8>
+      <x9>0.0</x9>
+      <x10>0.0</x10>
+      <x11>0.0</x11>
+      <x12>0.0</x12>
+      <x13>0.0</x13>
+      <x14>0.0</x14>
+      <x15>0.0</x15>
+    </dataPoint>
+  </dataGroup>
+</experiment>
