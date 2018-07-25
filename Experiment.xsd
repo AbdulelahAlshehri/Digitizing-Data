@@ -1,3 +1,152 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/Expgen" xmlns:tns="http://www.example.org/Expgen" elementFormDefault="qualified">
-</schema>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+          <!-- XML Schema created on Sun Jul 22 2018 13:23:26 GMT+0300 (Arabian Standard Time) -->
+          <!-- Author: Abdulelah Alshehri asaalshehr@gmail.com -->
+       <xs:element name="experiment">     
+              <xs:complexType>
+               <xs:sequence>
+                             <xs:choice maxOccurs="unbounded">
+                            <xs:element name="fileAuthor" type="xs:string"></xs:element>
+
+                            <xs:element name="timeshift" type="xs:string" minOccurs="0"></xs:element>
+                            <xs:element name="comment" type="xs:string" minOccurs="0"></xs:element>
+                                     <xs:element name="ignitionType">
+            <xs:complexType>
+              <xs:attribute name="target" type="xs:string" use="required" />
+              <xs:attribute name="type" type="xs:string" use="required" />
+            </xs:complexType>
+          </xs:element>
+                            <xs:element name="fileDOI" type="xs:string" minOccurs="0"></xs:element>
+                            <xs:element name="fileVersion" minOccurs="0">
+                                   <xs:complexType>
+                                          <xs:sequence>
+                                                 <xs:element name="major" type="xs:int" ></xs:element>
+                                                 <xs:element name="minor" type="xs:int"></xs:element>
+                                             </xs:sequence>
+                                      </xs:complexType>
+                               </xs:element>
+
+                            <xs:element name="ReSpecThVersion">
+                                   <xs:complexType>
+                                          <xs:sequence>
+                                                 <xs:element name="major"></xs:element>
+                                                 <xs:element name="minor"></xs:element>
+                                             </xs:sequence>
+                                      </xs:complexType>
+                               </xs:element>
+                            <xs:element name="experimentType" type="xs:string"></xs:element>
+							<xs:element name="bibliographyLink">
+           						 <xs:complexType>
+             						 <xs:sequence>
+               							 <xs:element name="description" type="xs:string" />
+                						 <xs:element name="referenceDOI" type="xs:string" />
+                						 <xs:element name="location" type="xs:string" />
+                						 <xs:element name="table" />
+                						 <xs:element name="figure" type="xs:string" />
+             						 </xs:sequence>
+           						 </xs:complexType>
+          					</xs:element>
+                            <xs:element name="apparatus" minOccurs="0">
+                                   <xs:complexType>
+                                          <xs:sequence>
+                                                 <xs:element name="kind" type="xs:string"></xs:element>
+                                             </xs:sequence>
+                                      </xs:complexType>
+                               </xs:element>
+							<xs:element name="commonProperties">
+           						 <xs:complexType>
+             						 <xs:sequence>
+               							 <xs:element name="property">
+                							  <xs:complexType>
+                  								  <xs:sequence>
+                     								 <xs:element maxOccurs="unbounded" name="component">
+                     									   <xs:complexType>
+                     										     <xs:sequence>
+                      									       <xs:element name="speciesLink">
+                            									  <xs:complexType>
+                                		<xs:attribute name="preferredKey" type="xs:string" use="required" />
+                               				 <xs:attribute name="CAS" type="xs:string" use="required" />
+                              			</xs:complexType>
+                            			</xs:element>
+                           				 <xs:element name="amount">
+                             			 <xs:complexType>
+                              			  <xs:simpleContent>
+                                		  <xs:extension base="xs:decimal">
+                                    <xs:attribute name="units" type="xs:string" use="required" />
+                                  </xs:extension>
+                                </xs:simpleContent>
+                              </xs:complexType>
+                            </xs:element>
+                          </xs:sequence>
+                        </xs:complexType>
+                      </xs:element>
+                    </xs:sequence>
+                    <xs:attribute name="name" type="xs:string" use="required" />
+                    <xs:attribute name="sourcetype" type="xs:string" use="required" />
+                  </xs:complexType>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+                            <xs:element name="dataGroup">
+                                   <xs:complexType>
+                                          <xs:sequence>
+                                                 <xs:element name="dataGroupLink">
+                                                        <xs:complexType>
+                                                               <xs:attribute name="dataGroupID" type="xs:string"></xs:attribute>
+                                                               <xs:attribute name="dataPointID" type="xs:string"></xs:attribute>
+                                                           </xs:complexType>
+                                                    </xs:element>
+                                                 <xs:element name="property" maxOccurs="unbounded">
+                                                        <xs:complexType>
+                                                               <xs:attribute name="description" type="xs:string"></xs:attribute>
+                                                               <xs:attribute name="id" type="xs:string"></xs:attribute>
+                                                               <xs:attribute name="label" type="xs:string"></xs:attribute>
+                                                               <xs:attribute name="plotaxis" type="xs:string"></xs:attribute>
+                                                               <xs:attribute name="plotscale" type="xs:string"></xs:attribute>
+                                                               <xs:attribute name="name" type="xs:string"></xs:attribute>
+                                                               <xs:attribute name="units" type="xs:string"></xs:attribute>
+                                                           </xs:complexType>
+                                                    </xs:element>
+                                                 <xs:element name="dataPoint" maxOccurs="unbounded">
+                                                        <xs:complexType>
+                                                               <xs:sequence>
+                                                                      <xs:element name="x1" type="xs:double" minOccurs="0"></xs:element>
+                                                                      <xs:element name="x2" type="xs:double" minOccurs="0"></xs:element>
+                                                                      <xs:element name="x3" type="xs:double" minOccurs="0"></xs:element>
+                                                                      <xs:element name="x4" type="xs:double" minOccurs="0"></xs:element>
+                                                                      <xs:element name="x5" type="xs:double" minOccurs="0"></xs:element>
+                                                                      <xs:element name="x6" type="xs:double" minOccurs="0"></xs:element>
+                                                                      <xs:element name="x7" type="xs:double" minOccurs="0"></xs:element>
+                                                                      <xs:element name="x8" type="xs:double" minOccurs="0"></xs:element>
+                                                                      <xs:element name="x9" type="xs:double" minOccurs="0"></xs:element>
+                                                                      <xs:element name="x10" type="xs:double" minOccurs="0"></xs:element>
+                                                                      <xs:element name="x11" type="xs:double" minOccurs="0"></xs:element>
+                                                                      <xs:element name="x12" type="xs:double" minOccurs="0"></xs:element>
+                                                                      <xs:element name="x13" type="xs:double" minOccurs="0"></xs:element>
+                                                                      <xs:element name="x14" type="xs:double" minOccurs="0"></xs:element>
+                                                                      <xs:element name="x15" type="xs:double" minOccurs="0"></xs:element>
+                                                                      <xs:element name="x16" type="xs:double" minOccurs="0"></xs:element>
+                                                                      <xs:element name="x17" type="xs:double" minOccurs="0"></xs:element>
+                                                                      <xs:element name="x18" type="xs:double" minOccurs="0"></xs:element>
+                                                                      <xs:element name="x19" type="xs:double" minOccurs="0"></xs:element>
+                                                                      <xs:element name="x20" type="xs:double" minOccurs="0"></xs:element>
+                                                                      <xs:element name="x21" type="xs:double" minOccurs="0"></xs:element>
+                                                                      <xs:element name="x22" type="xs:double" minOccurs="0"></xs:element>
+                                                                      <xs:element name="x23" type="xs:double" minOccurs="0"></xs:element>
+                                                                      <xs:element name="x24" type="xs:double" minOccurs="0"></xs:element>
+                                                                      <xs:element name="x25" type="xs:double" minOccurs="0"></xs:element>                        
+                                                                  </xs:sequence>
+                                                           </xs:complexType>
+                                                    </xs:element>
+                                             </xs:sequence>
+                                          <xs:attribute name="id" type="xs:string"></xs:attribute>
+                                          <xs:attribute name="label" type="xs:string"></xs:attribute>
+                                          <xs:attribute name="dataPointLink" type="xs:unsignedByte" use="optional" />
+                                      </xs:complexType>
+                               </xs:element>
+                            </xs:choice>
+                        </xs:sequence>
+                 </xs:complexType>
+          </xs:element>
+   </xs:schema>
