@@ -6,12 +6,12 @@
     <xs:complexType>
       <xs:sequence>
           <xs:element name="fileAuthor" type="xs:string" />
-          <xs:element name="timeshift" type="xs:string"/>
+          <xs:element name="timeshift" type="xs:string" minOccurs="0" />
           <xs:element name="comment" type="xs:string" minOccurs="0" />
-          <xs:element name="ignitionType">
+          <xs:element name="ignitionType" minOccurs="0">
             <xs:complexType>
-              <xs:attribute name="target" type="xs:string" use="required" />
-              <xs:attribute name="type" type="xs:string" use="required" />
+              <xs:attribute name="target" type="xs:string"/>
+              <xs:attribute name="type" type="xs:string" />
             </xs:complexType>
           </xs:element>
           <xs:element name="fileDOI" type="xs:string" minOccurs="0" />
@@ -31,8 +31,8 @@
               </xs:sequence>
             </xs:complexType>
           </xs:element>
-          <xs:element name="experimentType" type="xs:string" />
-          <xs:element name="bibliographyLink">
+          <xs:element name="experimentType" type="xs:string" minOccurs="0"/>
+          <xs:element name="bibliographyLink" minOccurs="0">
             <xs:complexType>
               <xs:sequence>
                 <xs:element name="description" type="xs:string" />
@@ -56,16 +56,65 @@
                 <xs:element name="property">
                   <xs:complexType>
                     <xs:sequence>
-                      <xs:element maxOccurs="unbounded" name="component">
+                      <xs:element maxOccurs="unbounded" name="component" minOccurs="0">
                         <xs:complexType>
                           <xs:sequence>
-                            <xs:element name="speciesLink">
+                            <xs:element name="speciesLink" minOccurs="0">
                               <xs:complexType>
                                 <xs:attribute name="preferredKey" type="xs:string" use="required" />
                                 <xs:attribute name="CAS" type="xs:string" use="required" />
                               </xs:complexType>
                             </xs:element>
-                            <xs:element name="amount">
+                            <xs:element name="amount" minOccurs="0">
+                              <xs:complexType>
+                                <xs:simpleContent>
+                                  <xs:extension base="xs:decimal">
+                                    <xs:attribute name="units" type="xs:string" />
+                                  </xs:extension>
+                                </xs:simpleContent>
+                              </xs:complexType>
+                            </xs:element>
+                          </xs:sequence>
+                        </xs:complexType>
+                      </xs:element>
+                    </xs:sequence>
+                    <xs:attribute name="name" type="xs:string"/>
+                    <xs:attribute name="sourcetype" type="xs:string"  />
+                    <xs:attribute name="description" type="xs:string" />
+                    <xs:attribute name="id" type="xs:string" />
+                    <xs:attribute name="label" type="xs:string" />
+                    <xs:attribute name="plotaxis" type="xs:string" />
+                    <xs:attribute name="plotscale" type="xs:string" />
+                    <xs:attribute name="units" type="xs:string" />                   <xs:attribute name="reference" type="xs:string" />
+                    <xs:attribute name="kind" type="xs:string" />
+                    <xs:attribute name="bound" type="xs:string" />              
+                  </xs:complexType>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="dataGroup" maxOccurs="unbounded" >
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="dataGroupLink" minOccurs="0">
+                  <xs:complexType>
+                    <xs:attribute name="dataGroupID" type="xs:string" />
+                    <xs:attribute name="dataPointID" type="xs:string" />
+                  </xs:complexType>
+                </xs:element>
+                <xs:element name="property" maxOccurs="unbounded">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element maxOccurs="unbounded" name="component" minOccurs="0">
+                        <xs:complexType>
+                          <xs:sequence>
+                            <xs:element name="speciesLink" minOccurs="0">
+                              <xs:complexType>
+                                <xs:attribute name="preferredKey" type="xs:string" use="required" />
+                                <xs:attribute name="CAS" type="xs:string" use="required" />
+                              </xs:complexType>
+                            </xs:element>
+                            <xs:element name="amount" minOccurs="0">
                               <xs:complexType>
                                 <xs:simpleContent>
                                   <xs:extension base="xs:decimal">
@@ -78,31 +127,16 @@
                         </xs:complexType>
                       </xs:element>
                     </xs:sequence>
-                    <xs:attribute name="name" type="xs:string" use="required" />
-                    <xs:attribute name="sourcetype" type="xs:string" use="required" />
-                  </xs:complexType>
-                </xs:element>
-              </xs:sequence>
-            </xs:complexType>
-          </xs:element>
-          <xs:element name="dataGroup">
-            <xs:complexType>
-              <xs:sequence>
-                <xs:element name="dataGroupLink">
-                  <xs:complexType>
-                    <xs:attribute name="dataGroupID" type="xs:string" />
-                    <xs:attribute name="dataPointID" type="xs:string" />
-                  </xs:complexType>
-                </xs:element>
-                <xs:element name="property" maxOccurs="unbounded">
-                  <xs:complexType>
+                    <xs:attribute name="sourcetype" type="xs:string" />
                     <xs:attribute name="description" type="xs:string" />
                     <xs:attribute name="id" type="xs:string" />
                     <xs:attribute name="label" type="xs:string" />
                     <xs:attribute name="plotaxis" type="xs:string" />
                     <xs:attribute name="plotscale" type="xs:string" />
                     <xs:attribute name="name" type="xs:string" />
-                    <xs:attribute name="units" type="xs:string" />
+                    <xs:attribute name="units" type="xs:string" />                   <xs:attribute name="reference" type="xs:string" />
+                    <xs:attribute name="kind" type="xs:string" />
+                    <xs:attribute name="bound" type="xs:string" />              
                   </xs:complexType>
                 </xs:element>
                 <xs:element name="dataPoint" maxOccurs="unbounded">
